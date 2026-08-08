@@ -31,9 +31,13 @@ def main() -> None:
     events = bootstrap["events"]
     next_deadline = next((e for e in events if e["is_next"]), None)
     print(f"snapshot -> {out}")
-    print(f"players: {len(players)}, fixtures: {len(fixtures)}, gameweeks: {len(events)}")
+    print(
+        f"players: {len(players)}, fixtures: {len(fixtures)}, gameweeks: {len(events)}"
+    )
     if next_deadline:
-        print(f"next deadline: {next_deadline['name']} at {next_deadline['deadline_time']}")
+        print(
+            f"next deadline: {next_deadline['name']} at {next_deadline['deadline_time']}"
+        )
 
 
 if __name__ == "__main__":
